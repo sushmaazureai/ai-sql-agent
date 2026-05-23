@@ -38,7 +38,7 @@ def restore(db, file):
     cursor.execute(sql)
     conn.commit()
 
-    return f"✅ Restored {db}"
+    return f"Restored {db}"
 
 
 def run_agent(command):
@@ -47,4 +47,4 @@ def run_agent(command):
     if parsed["action"] == "restore":
         return restore(parsed["db"], parsed["file"])
 
-    return "❌ Command not understood"
+    return "Command not understood"
