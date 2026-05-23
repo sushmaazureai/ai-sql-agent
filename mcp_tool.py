@@ -1,9 +1,9 @@
-from mcp.server.fastapi import FastAPIMCP
+from mcp.server import server
 from agent import run_agent
 
 app = FastAPIMCP("sql-agent")
 
-@app.tool()
+@server.tool()
 def sql_restore(command: str) -> str:
     """
     Executes SQL restore commands using natural language
